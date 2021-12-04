@@ -4,36 +4,17 @@ import "./App.css";
 import characterList from "./characters";
 import aptitudeList from "./aptitudes";
 import cellsList from "./cells";
-import subCell from "./subCell";
+import logo from "./assets/BSlogo.png";
+import randomCharacter from "./assets/randomLogos/randomCharacter.png";
+import randomAptitude from "./assets/randomLogos/randomAptitude.png";
+import randomCell from "./assets/randomLogos/randomCell.png";
 
 function App() {
-  const [character, setCharacter] = useState("");
+  const [character, setCharacter] = useState(randomCharacter);
 
-  const [aptitude, setAptitude] = useState("");
+  const [aptitude, setAptitude] = useState(randomAptitude);
 
-  const [cell, setCell] = useState("");
-
-  const [cell1, setCell1] = useState("");
-  const [cell2, setCell2] = useState("");
-
-  function subCells() {
-    if (cell === "/static/media/Blue.cb3c78a0.png") {
-      setCell1(subCell[0][0][Math.floor(Math.random() * 2)]);
-      setCell2(subCell[0][1][Math.floor(Math.random() * 2)]);
-    } else if (cell === "/static/media/Green.a79220ef.png") {
-      setCell1(subCell[1][0][Math.floor(Math.random() * 2)]);
-      setCell2(subCell[1][1][Math.floor(Math.random() * 2)]);
-    } else if (cell === "/static/media/Pink.3b7cc1fb.png") {
-      setCell1(subCell[2][0][Math.floor(Math.random() * 2)]);
-      setCell2(subCell[2][1][Math.floor(Math.random() * 2)]);
-    } else if (cell === "/static/media/Purple.db4bc78f.png") {
-      setCell1(subCell[3][0][Math.floor(Math.random() * 2)]);
-      setCell2(subCell[3][1][Math.floor(Math.random() * 2)]);
-    } else if (cell === "/static/media/Red.3e4c14fb.png") {
-      setCell1(subCell[4][0][Math.floor(Math.random() * 2)]);
-      setCell2(subCell[4][1][Math.floor(Math.random() * 2)]);
-    }
-  }
+  const [cell, setCell] = useState(randomCell);
 
   function Randomizer() {
     setCharacter(
@@ -41,21 +22,23 @@ function App() {
     );
     setAptitude(aptitudeList[Math.floor(Math.random() * aptitudeList.length)]);
     setCell(cellsList[Math.floor(Math.random() * cellsList.length)]);
-    setCell1("");
-    setCell2("");
   }
 
   return (
     <div className="App">
-      <img src={character} />
-      <img src={aptitude} />
-      <img src={cell} />
-      <div>
-        <img src={cell1} />
-        <img src={cell2} />
+      <div className="logoDiv">
+        <img src={logo} className="logo" />
       </div>
-      <button onClick={Randomizer}>Randomize!</button>
-      <button onClick={subCells}>Randomize Cell</button>
+      <div className="randomizerDiv">
+        <div className="characterAptitudeDiv">
+          <img src={character} className="character" />
+          <img src={aptitude} className="aptitude" />
+        </div>
+        <img src={cell} className="cell" />
+        <button onClick={Randomizer} className="button">
+          Randomize
+        </button>
+      </div>
     </div>
   );
 }
