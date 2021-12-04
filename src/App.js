@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { useState } from "react";
 import "./App.css";
 import characterList from "./characters";
@@ -6,17 +7,11 @@ import cellsList from "./cells";
 import subCell from "./subCell";
 
 function App() {
-  const [character, setCharacter] = useState(
-    characterList[Math.floor(Math.random() * characterList.length)]
-  );
+  const [character, setCharacter] = useState("");
 
-  const [aptitude, setAptitude] = useState(
-    aptitudeList[Math.floor(Math.random() * aptitudeList.length)]
-  );
+  const [aptitude, setAptitude] = useState("");
 
-  const [cell, setCell] = useState(
-    cellsList[Math.floor(Math.random() * cellsList.length)]
-  );
+  const [cell, setCell] = useState("");
 
   const [cell1, setCell1] = useState("");
   const [cell2, setCell2] = useState("");
@@ -52,9 +47,9 @@ function App() {
 
   return (
     <div className="App">
-      <img src={character} alt="Character" />
-      <img src={aptitude} alt="Aptitude" />
-      <img src={cell} alt="Cell" />
+      <img src={character} />
+      <img src={aptitude} />
+      <img src={cell} />
       <div>
         <img src={cell1} />
         <img src={cell2} />
