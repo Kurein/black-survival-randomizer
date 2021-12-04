@@ -9,6 +9,7 @@ body {
 .logo {
   width: 100vw;
   max-width: 800px;
+  height: 30vh;
 }
 
 .character {
@@ -21,7 +22,6 @@ body {
 }
 
 .cell {
-  width: 60vw;
   max-width: 250px;
   border: 2px solid white;
   border-radius: 15px;
