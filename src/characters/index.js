@@ -98,7 +98,6 @@ const characterList = [
   Sissela,
   Sua,
   Tia,
-  William,
   Xiukai,
   Yuki,
   William,
