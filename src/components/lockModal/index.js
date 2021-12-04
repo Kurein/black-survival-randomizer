@@ -101,7 +101,7 @@ function Modal({
         <button
           onClick={() => {
             setModal(true);
-            setCharacterCheck(false);
+            setAptitudeCheck(false);
           }}
           className="button"
         >
