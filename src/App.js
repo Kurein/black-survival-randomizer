@@ -12,6 +12,7 @@ import Modal from "./components/lockModal";
 import Echion from "./assets/characters/EchionRD.png";
 import JP from "./assets/characters/JPRD.png";
 import Isol from "./assets/characters/IsolRD.png";
+import RandomMastery from "./components/randommastery";
 
 function App() {
   const [character, setCharacter] = useState(randomCharacter);
@@ -25,6 +26,7 @@ function App() {
   const [aptitudeCheck, setAptitudeCheck] = useState(false);
   const [cellCheck, setCellCheck] = useState(false);
   const [modal, setModal] = useState(true);
+  const [masteryRandomizer, setMasteryRandomizer] = useState(false);
 
   const [characterLock, setCharacterLock] = useState(true);
   const [aptitudeLock, setAptitudeLock] = useState(true);
@@ -74,11 +76,14 @@ function App() {
                 className="character"
                 onClick={() => modalHandler("character")}
               />
-              <img
-                src={aptitude}
-                className="aptitude"
-                onClick={() => modalHandler("aptitude")}
-              />
+              <div className="subCADiv">
+                <img
+                  src={aptitude}
+                  className="aptitude"
+                  onClick={() => modalHandler("aptitude")}
+                />
+                {masteryRandomizer && <RandomMastery character={character} />}
+              </div>
             </div>
             <img
               src={cell}
@@ -109,6 +114,14 @@ function App() {
             <button onClick={Randomizer} className="button">
               Randomize
             </button>
+            <div className="masteryRandomizerDiv">
+              <input
+                type="checkbox"
+                onClick={() => setMasteryRandomizer(!masteryRandomizer)}
+                checked={masteryRandomizer}
+              />
+              <p>Mastery Randomizer</p>
+            </div>
           </>
         ) : (
           <Modal

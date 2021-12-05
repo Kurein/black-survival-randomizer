@@ -5,6 +5,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+h1,
+p {
+  margin: 0;
+  color: white;
+}
 
 .logo {
   width: 100vw;
@@ -42,8 +47,8 @@ body {
 }
 
 .randomizerDiv {
-  height: 580px;
-  width: 570px;
+  height: 610px;
+  width: 600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -67,6 +72,15 @@ body {
 .characterAptitudeDiv {
   display: flex;
   align-items: center;
+}
+
+.subCADiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.masteryRandomizerDiv {
+  display: flex;
 }
 
 .App {
