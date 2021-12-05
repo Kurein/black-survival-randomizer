@@ -9,13 +9,17 @@ import randomCharacter from "./assets/randomLogos/randomCharacter.png";
 import randomAptitude from "./assets/randomLogos/randomAptitude.png";
 import randomCell from "./assets/randomLogos/randomCell.png";
 import Modal from "./components/lockModal";
+import Echion from "./assets/characters/EchionRD.png";
+import JP from "./assets/characters/JPRD.png";
+import Isol from "./assets/characters/IsolRD.png";
 
 function App() {
   const [character, setCharacter] = useState(randomCharacter);
-
   const [aptitude, setAptitude] = useState(randomAptitude);
-
   const [cell, setCell] = useState(randomCell);
+  const JPgamestyle = ["Hack", "Hybrid", "Battle"];
+  const IsolGamestyle = ["Trap", "Hybrid", "Battle"];
+  const EchionGamestyle = ["King Black Mamba", "Queen Death Adder"];
 
   const [characterCheck, setCharacterCheck] = useState(false);
   const [aptitudeCheck, setAptitudeCheck] = useState(false);
@@ -81,6 +85,27 @@ function App() {
               className="cell"
               onClick={() => modalHandler("cell")}
             />
+            {character === Echion ? (
+              <h1>
+                {
+                  EchionGamestyle[
+                    Math.floor(Math.random() * EchionGamestyle.length)
+                  ]
+                }
+              </h1>
+            ) : character === Isol ? (
+              <h1>
+                {
+                  IsolGamestyle[
+                    Math.floor(Math.random() * IsolGamestyle.length)
+                  ]
+                }
+              </h1>
+            ) : character === JP ? (
+              <h1>
+                {JPgamestyle[Math.floor(Math.random() * JPgamestyle.length)]}
+              </h1>
+            ) : null}
             <button onClick={Randomizer} className="button">
               Randomize
             </button>
