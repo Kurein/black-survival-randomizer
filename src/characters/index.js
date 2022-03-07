@@ -15,6 +15,7 @@ import Chloe from "../assets/characters/ChloeRD.png";
 import Dailin from "../assets/characters/DailinRD.png";
 import Daniel from "../assets/characters/DanielRD.png";
 import Echion from "../assets/characters/EchionRD.png";
+import Elena from "../assets/characters/ElenaRD.png";
 import Eleven from "../assets/characters/ElevenRD.png";
 import Emma from "../assets/characters/EmmaRD.png";
 import Eva from "../assets/characters/EvaRD.png";
@@ -68,6 +69,7 @@ const characterList = [
   Dailin,
   Daniel,
   Echion,
+  Elena,
   Eleven,
   Emma,
   Eva,

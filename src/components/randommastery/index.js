@@ -11,10 +11,21 @@ import Laura from "../../assets/characters/LauraRD.png";
 import Luke from "../../assets/characters/LukeRD.png";
 import Nathapon from "../../assets/characters/NathaponRD.png";
 import Silvia from "../../assets/characters/SilviaRD.png";
+import Alex from "../../assets/characters/AlexRD.png";
 
 function RandomMastery({ character }) {
   if (character === Aiden) {
     return <h1>{["Gun", "Blade"][Math.floor(Math.random() * 2)]}</h1>;
+  } else if (character === Alex) {
+    return (
+      <h1>
+        {
+          ["Throw", "Stab", "Gun", "Blade", "Stab", "Blunt", "Hand"][
+            Math.floor(Math.random() * 7)
+          ]
+        }
+      </h1>
+    );
   } else if (character === Camilo) {
     return <h1>{["Throw", "Stab"][Math.floor(Math.random() * 2)]}</h1>;
   } else if (character === Dailin) {
@@ -30,7 +41,7 @@ function RandomMastery({ character }) {
   } else if (character === Jenny) {
     return <h1>{["Stab", "Gun"][Math.floor(Math.random() * 2)]}</h1>;
   } else if (character === JP) {
-    return <h1>{["Throw", "Hand"][Math.floor(Math.random() * 2)]}</h1>;
+    return <h1>{["Blunt", "Hand"][Math.floor(Math.random() * 2)]}</h1>;
   } else if (character === Laura) {
     return <h1>{["Throw", "Blunt"][Math.floor(Math.random() * 2)]}</h1>;
   } else if (character === Luke) {
