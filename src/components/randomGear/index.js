@@ -17,13 +17,11 @@ import Barbara from "../../assets/characters/BarbaraRD.png";
 import Bernice from "../../assets/characters/BerniceRD.png";
 import Bianca from "../../assets/characters/BiancaRD.png";
 import Camilo from "../../assets/characters/CamiloRD.png";
-import Cathy from "../../assets/characters/CathyRD.png";
 import Celine from "../../assets/characters/CelineRD.png";
 import Chiara from "../../assets/characters/ChiaraRD.png";
 import Chloe from "../../assets/characters/ChloeRD.png";
 import Dailin from "../../assets/characters/DailinRD.png";
 import Daniel from "../../assets/characters/DanielRD.png";
-import Echion from "../../assets/characters/EchionRD.png";
 import Elena from "../../assets/characters/ElenaRD.png";
 import Eleven from "../../assets/characters/ElevenRD.png";
 import Emma from "../../assets/characters/EmmaRD.png";
@@ -62,13 +60,117 @@ import Zahir from "../../assets/characters/ZahirRD.png";
 
 function GearRandomizer(character) {
   let weaponGear = [];
+
   if (character === Adela) {
-    weaponGear = [...blunt];
+    weaponGear = [weaponGear, ...blunt];
   } else if (character === Adriana) {
     weaponGear = [...thrown];
   } else if (character === Aiden) {
     weaponGear = [...blade, ...gun];
+  } else if (character === Alex) {
+    weaponGear = [
+      ...blade,
+      ...gun,
+      ...stab,
+      ...bow,
+      ...blunt,
+      ...hand,
+      ...thrown,
+    ];
+  } else if (character === Arda) {
+    weaponGear = [...bow];
+  } else if (character === Aya) {
+    weaponGear = [...gun];
+  } else if (character === Barbara) {
+    weaponGear = [...blunt];
+  } else if (character === Bernice) {
+    weaponGear = [...gun];
+  } else if (character === Bianca) {
+    weaponGear = [...stab, ...blunt];
+  } else if (character === Camilo) {
+    weaponGear = [...stab, ...thrown];
+  } else if (character === Celine) {
+    weaponGear = [...gun];
+  } else if (character === Chiara) {
+    weaponGear = [...blade];
+  } else if (character === Chloe) {
+    weaponGear = [...stab];
+  } else if (character === Dailin) {
+    weaponGear = [...hand, ...blade, ...blunt];
+  } else if (character === Daniel) {
+    weaponGear = [...stab];
+  } else if (character === Elena) {
+    weaponGear = [...blade];
+  } else if (character === Eleven) {
+    weaponGear = [...blunt];
+  } else if (character === Emma) {
+    weaponGear = [...thrown, ...blunt];
+  } else if (character === Eva) {
+    weaponGear = [...blade, ...hand, ...blunt, ...stab];
+  } else if (character === Fiora) {
+    weaponGear = [...stab];
+  } else if (character === Hart) {
+    weaponGear = [...blunt];
+  } else if (character === Hyejin) {
+    weaponGear = [...bow, ...hand];
+  } else if (character === HyunWoo) {
+    weaponGear = [...hand];
+  } else if (character === Isol) {
+    weaponGear = [...stab, ...bow, ...gun];
+  } else if (character === Jackie) {
+    weaponGear = [...blade, ...stab, ...blunt];
+  } else if (character === Jan) {
+    weaponGear = [...hand];
+  } else if (character === Jenny) {
+    weaponGear = [...stab, ...gun];
+  } else if (character === Johann) {
+    weaponGear = [...hand];
+  } else if (character === JP) {
+    weaponGear = [...hand, ...blunt];
+  } else if (character === Laura) {
+    weaponGear = [...blunt];
+  } else if (character === Lenox) {
+    weaponGear = [...blunt];
+  } else if (character === Leon) {
+    weaponGear = [...hand];
+  } else if (character === Luke) {
+    weaponGear = [...gun, ...stab];
+  } else if (character === Magnus) {
+    weaponGear = [...blunt];
+  } else if (character === Mai) {
+    weaponGear = [...stab];
+  } else if (character === Nadine) {
+    weaponGear = [...bow];
+  } else if (character === Nathapon) {
+    weaponGear = [...gun, ...hand];
+  } else if (character === Nicky) {
+    weaponGear = [...hand];
+  } else if (character === Rio) {
+    weaponGear = [...bow];
+  } else if (character === Rosalio) {
+    weaponGear = [...blunt];
+  } else if (character === Rozzi) {
+    weaponGear = [...gun];
+  } else if (character === Shoichi) {
+    weaponGear = [...stab];
+  } else if (character === Silvia) {
+    weaponGear = [...hand, ...blunt, ...gun];
+  } else if (character === Sissela) {
+    weaponGear = [...thrown];
+  } else if (character === Sua) {
+    weaponGear = [...blunt];
+  } else if (character === Tia) {
+    weaponGear = [...blunt];
+  } else if (character === Xiukai) {
+    weaponGear = [...blade];
+  } else if (character === Yuki) {
+    weaponGear = [...blade];
+  } else if (character === William) {
+    weaponGear = [...thrown];
+  } else if (character === Zahir) {
+    weaponGear = [...thrown];
   }
+
   return [
     weaponGear[Math.floor(Math.random() * weaponGear.length)],
     armor[Math.floor(Math.random() * armor.length)],

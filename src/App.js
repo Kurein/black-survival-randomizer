@@ -27,11 +27,12 @@ function App() {
   const [aptitudeCheck, setAptitudeCheck] = useState(false);
   const [cellCheck, setCellCheck] = useState(false);
   const [modal, setModal] = useState(true);
+  const [buttonUse, setButtonUse] = useState(false);
 
   const [characterLock, setCharacterLock] = useState(true);
   const [aptitudeLock, setAptitudeLock] = useState(true);
   const [cellLock, setCellLock] = useState(true);
-  const [gearLock, setgearLock] = useState([randomCell, randomCell]);
+  let gearLock = [randomCell, randomCell];
 
   function Randomizer() {
     if (characterLock) {
@@ -47,7 +48,9 @@ function App() {
     if (cellLock) {
       setCell(cellsList[Math.floor(Math.random() * cellsList.length)]);
     }
-    setgearLock(GearRandomizer(character));
+    if (buttonUse === false) {
+      setButtonUse(!buttonUse);
+    }
   }
 
   function modalHandler(str) {
@@ -62,6 +65,10 @@ function App() {
     }
 
     setModal(false);
+  }
+
+  if (buttonUse) {
+    gearLock = GearRandomizer(character);
   }
 
   return (
