@@ -12,7 +12,8 @@ import Modal from "./components/lockModal";
 import Echion from "./assets/characters/EchionRD.png";
 import JP from "./assets/characters/JPRD.png";
 import Isol from "./assets/characters/IsolRD.png";
-import RandomMastery from "./components/randommastery";
+import Cathy from "./assets/characters/CathyRD.png";
+import GearRandomizer from "./components/randomGear";
 
 function App() {
   const [character, setCharacter] = useState(randomCharacter);
@@ -26,11 +27,11 @@ function App() {
   const [aptitudeCheck, setAptitudeCheck] = useState(false);
   const [cellCheck, setCellCheck] = useState(false);
   const [modal, setModal] = useState(true);
-  const [masteryRandomizer, setMasteryRandomizer] = useState(false);
 
   const [characterLock, setCharacterLock] = useState(true);
   const [aptitudeLock, setAptitudeLock] = useState(true);
   const [cellLock, setCellLock] = useState(true);
+  const [gearLock, setgearLock] = useState([randomCell, randomCell]);
 
   function Randomizer() {
     if (characterLock) {
@@ -46,6 +47,7 @@ function App() {
     if (cellLock) {
       setCell(cellsList[Math.floor(Math.random() * cellsList.length)]);
     }
+    setgearLock(GearRandomizer(character));
   }
 
   function modalHandler(str) {
@@ -82,7 +84,6 @@ function App() {
                   className="aptitude"
                   onClick={() => modalHandler("aptitude")}
                 />
-                {masteryRandomizer && <RandomMastery character={character} />}
               </div>
             </div>
             <img
@@ -111,17 +112,17 @@ function App() {
                 {JPgamestyle[Math.floor(Math.random() * JPgamestyle.length)]}
               </h1>
             ) : null}
+            <div className="gearDiv">
+              {character === Cathy || character === Echion ? (
+                <></>
+              ) : (
+                <img src={gearLock[0]} alt="weapon" />
+              )}
+              <img src={gearLock[1]} alt="armor" />
+            </div>
             <button onClick={Randomizer} className="button">
               Randomize
             </button>
-            <div className="masteryRandomizerDiv">
-              <input
-                type="checkbox"
-                onClick={() => setMasteryRandomizer(!masteryRandomizer)}
-                checked={masteryRandomizer}
-              />
-              <p>Mastery Randomizer</p>
-            </div>
           </>
         ) : (
           <Modal
