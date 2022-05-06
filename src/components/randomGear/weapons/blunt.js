@@ -5,6 +5,6 @@ import LongRod from "../../../assets/weapons/blunt/Long_Rod.png";
 import ShortRod from "../../../assets/weapons/blunt/Short_Rod.png";
 import Whip from "../../../assets/weapons/blunt/Whip.png";
 
-const blunt = [AnatomyModel, Bamboo, Fan, LongRod, ShortRod, Whip];
+const blunt = [Bamboo, Fan, LongRod, ShortRod, Whip];
 
 export default blunt;
