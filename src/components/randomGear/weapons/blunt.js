@@ -1,4 +1,3 @@
-import AnatomyModel from "../../../assets/weapons/blunt/Anatomy_Model.png";
 import Bamboo from "../../../assets/weapons/blunt/Bamboo.png";
 import Fan from "../../../assets/weapons/blunt/Fan.png";
 import LongRod from "../../../assets/weapons/blunt/Long_Rod.png";

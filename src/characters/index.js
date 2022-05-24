@@ -19,6 +19,7 @@ import Elena from "../assets/characters/ElenaRD.png";
 import Eleven from "../assets/characters/ElevenRD.png";
 import Emma from "../assets/characters/EmmaRD.png";
 import Eva from "../assets/characters/EvaRD.png";
+import Felix from "../assets/characters/FelixRD.png";
 import Fiora from "../assets/characters/FioraRD.png";
 import Hart from "../assets/characters/HartRD.png";
 import Hyejin from "../assets/characters/HyejinRD.png";
@@ -73,6 +74,7 @@ const characterList = [
   Eleven,
   Emma,
   Eva,
+  Felix,
   Fiora,
   Hart,
   Hyejin,

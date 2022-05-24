@@ -2,7 +2,7 @@
 import { useState } from "react";
 import "./App.css";
 import characterList from "./characters";
-import aptitudeList from "./aptitudes";
+import { aptitudeList, filterAptitudes } from "./aptitudes";
 import cellsList from "./cells";
 import logo from "./assets/BSlogo.png";
 import randomCharacter from "./assets/randomLogos/randomCharacter.png";
@@ -35,15 +35,18 @@ function App() {
   let gearLock = [randomCell, randomCell];
 
   function Randomizer() {
+    let actualCharacter =
+      characterList[Math.floor(Math.random() * characterList.length)];
+
+    if (!characterLock) {
+      actualCharacter = character;
+    }
+
     if (characterLock) {
-      setCharacter(
-        characterList[Math.floor(Math.random() * characterList.length)]
-      );
+      setCharacter(actualCharacter);
     }
     if (aptitudeLock) {
-      setAptitude(
-        aptitudeList[Math.floor(Math.random() * aptitudeList.length)]
-      );
+      setAptitude(filterAptitudes(actualCharacter));
     }
     if (cellLock) {
       setCell(cellsList[Math.floor(Math.random() * cellsList.length)]);

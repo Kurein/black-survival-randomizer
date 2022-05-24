@@ -26,6 +26,7 @@ import Elena from "../../assets/characters/ElenaRD.png";
 import Eleven from "../../assets/characters/ElevenRD.png";
 import Emma from "../../assets/characters/EmmaRD.png";
 import Eva from "../../assets/characters/EvaRD.png";
+import Felix from "../../assets/characters/FelixRD.png";
 import Fiora from "../../assets/characters/FioraRD.png";
 import Hart from "../../assets/characters/HartRD.png";
 import Hyejin from "../../assets/characters/HyejinRD.png";
@@ -107,6 +108,8 @@ function GearRandomizer(character) {
     weaponGear = [...thrown, ...blunt];
   } else if (character === Eva) {
     weaponGear = [...blade, ...hand, ...blunt, ...stab];
+  } else if (character === Felix) {
+    weaponGear = [...stab];
   } else if (character === Fiora) {
     weaponGear = [...stab];
   } else if (character === Hart) {
