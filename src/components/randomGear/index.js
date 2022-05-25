@@ -63,7 +63,7 @@ function GearRandomizer(character) {
   let weaponGear = [];
 
   if (character === Adela) {
-    weaponGear = [weaponGear, ...blunt];
+    weaponGear = [...blunt];
   } else if (character === Adriana) {
     weaponGear = [...thrown];
   } else if (character === Aiden) {

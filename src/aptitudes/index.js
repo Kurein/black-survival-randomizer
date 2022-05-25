@@ -51,6 +51,8 @@ function filterAptitudes(character) {
       Accelerate,
       Ambush,
       AmmoSupply,
+      AmmoSupply,
+      AmmoSupply,
       BreadSeeking,
       CounterAttack,
       Pursuit,
@@ -66,6 +68,8 @@ function filterAptitudes(character) {
       Accelerate,
       Ambush,
       ArrowSupply,
+      ArrowSupply,
+      ArrowSupply,
       BreadSeeking,
       CounterAttack,
       Pursuit,
@@ -76,7 +80,19 @@ function filterAptitudes(character) {
     return newAptitudeList[Math.floor(Math.random() * newAptitudeList.length)];
   }
 
-  return aptitudeList[Math.floor(Math.random() * aptitudeList.length)];
+  const aptitudesListWithoutBowGun = [
+    Accelerate,
+    Ambush,
+    BreadSeeking,
+    CounterAttack,
+    Pursuit,
+    Restoration,
+    Scout,
+  ];
+
+  return aptitudesListWithoutBowGun[
+    Math.floor(Math.random() * aptitudesListWithoutBowGun.length)
+  ];
 }
 
 export { aptitudeList, filterAptitudes };
